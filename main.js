@@ -1,9 +1,19 @@
+document.getElementById('instructions').addEventListener('click', () => {
+  controls.lock(); // this activates pointer lock
+});
+
+controls.addEventListener('lock', () => {
+  document.getElementById('instructions').style.display = 'none';
+});
+controls.addEventListener('unlock', () => {
+  document.getElementById('instructions').style.display = 'block';
+});
+
 let camera, scene, renderer, controls;
 let moveForward = false, moveBackward = false, moveLeft = false, moveRight = false;
 let canJump = false;
 let velocity = new THREE.Vector3();
 let direction = new THREE.Vector3();
-
 init();
 animate();
 
