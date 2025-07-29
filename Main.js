@@ -1,5 +1,5 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.module.js';
-
+document.queryselector("gamer").addeventlistner('click', function startGame(){
 window.THREE = THREE; // make THREE global for PointerLockControls
 let camera, scene, renderer, controls;
 let moveForward = false, moveBackward = false, moveLeft = false, moveRight = false;
@@ -145,4 +145,5 @@ function onWindowResize() {
   camera.aspect = window.innerWidth/window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
+}
 }
